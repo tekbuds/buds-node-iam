@@ -1,0 +1,14 @@
+docker build -t my-buds-app .
+
+sacx-cnt-1:~/buds/buds-iam # docker images
+REPOSITORY              TAG              IMAGE ID       CREATED          SIZE
+my-buds-app             latest           b9a40da5a2a6   10 seconds ago   143MB
+
+
+docker run -dp 3000:3000 b9a40da5a2a6
+
+docker ps -a
+CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS                     PORTS                    NAMES
+c24efc5e9ea9   b9a40da        "docker-entrypoint.s…"   5 minutes ago   Up 5 minutes               0.0.0.0:3000->3000/tcp   practical_mayer
+	
+docker exec -it c24efc5e sh
