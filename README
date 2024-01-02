@@ -7,6 +7,8 @@ my-buds-app             latest           b9a40da5a2a6   10 seconds ago   143MB
 
 docker run -dp 3000:3000 b9a40da5a2a6
 
+curl 'http://10.227.239.121:3000/status'
+
 docker ps -a
 CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS                     PORTS                    NAMES
 c24efc5e9ea9   b9a40da        "docker-entrypoint.s…"   5 minutes ago   Up 5 minutes               0.0.0.0:3000->3000/tcp   practical_mayer
